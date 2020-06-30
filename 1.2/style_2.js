@@ -1,6 +1,6 @@
 
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext("2d");
+const tx = canvas.getContext("2d");
 
 var x = [
     4.18,
@@ -947,38 +947,71 @@ var y6 = [
     14.8,
     14.75 ];
 
-ctx.beginPath();
-for(let i = 0; i < x.length; i++) {
-    ctx.moveTo(x[i] * 22, y[i] * 22);
-    ctx.bezierCurveTo(x[i + 1] * 22, y[i+1] * 22,x[i+2] * 22,y[i+2] * 22,x[i + 3] * 22,y[i + 3] * 22);
+tx.beginPath();
+
+function sek(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-for(let i = 0; i < x1.length; i++) {
-    ctx.moveTo(x1[i] * 22, y1[i] * 22);
-    ctx.bezierCurveTo(x1[i + 1] * 22, y1[i+1] * 22,x1[i+2] * 22,y1[i+2] * 22,x1[i + 3] * 22,y1[i + 3] * 22);
+async function drawTheLine() {
+  for(var i = 0; i < x.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x[i] * 22, y[i] * 22);
+    tx.bezierCurveTo(x[i + 1] * 22, y[i + 1] * 22, x[i + 2] * 22, y[i + 2] * 22, x[i + 3] * 22, y[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x1.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x1[i] * 22, y1[i] * 22);
+    tx.bezierCurveTo(x1[i + 1] * 22, y1[i + 1] * 22, x1[i + 2] * 22, y1[i + 2] * 22, x1[i + 3] * 22, y1[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x2.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x2[i] * 22, y2[i] * 22);
+    tx.bezierCurveTo(x2[i + 1] * 22, y2[i + 1] * 22, x2[i + 2] * 22, y2[i + 2] * 22, x2[i + 3] * 22, y2[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x3.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x3[i] * 22, y3[i] * 22);
+    tx.bezierCurveTo(x3[i + 1] * 22, y3[i + 1] * 22, x3[i + 2] * 22, y3[i + 2] * 22, x3[i + 3] * 22, y3[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x4.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x4[i] * 22, y4[i] * 22);
+    tx.bezierCurveTo(x4[i + 1] * 22, y4[i + 1] * 22, x4[i + 2] * 22, y4[i + 2] * 22, x4[i + 3] * 22, y4[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x5.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x5[i] * 22, y5[i] * 22);
+    tx.bezierCurveTo(x5[i + 1] * 22, y5[i + 1] * 22, x5[i + 2] * 22, y5[i + 2] * 22, x5[i + 3] * 22, y5[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
+  for(var i = 0; i < x6.length; i++) {
+    await sek(10);
+    tx.beginPath();
+    tx.moveTo(x6[i] * 22, y6[i] * 22);
+    tx.bezierCurveTo(x6[i + 1] * 22, y6[i + 1] * 22, x6[i + 2] * 22, y6[i + 2] * 22, x6[i + 3] * 22, y6[i + 3] * 22);
+    tx.closePath();
+    tx.stroke();
+  }
 }
-for(let i = 0; i < x2.length; i++) {
-    ctx.moveTo(x2[i] * 22, y2[i] * 22);
-    ctx.bezierCurveTo(x2[i + 1] * 22, y2[i+1] * 22,x2[i+2] * 22,y2[i+2] * 22,x2[i + 3] * 22,y2[i + 3] * 22);
-}
+drawTheLine();
 
-for(let i = 0; i < x3.length; i++) {
-    ctx.moveTo(x3[i] * 22, y3[i] * 22);
-    ctx.bezierCurveTo(x3[i + 1] * 22, y3[i+1] * 22,x3[i+2] * 22,y3[i+2] * 22,x3[i + 3] * 22,y3[i + 3] * 22);
-}
+tx.stroke();
 
-for(let i = 0; i < x4.length; i++) {
-    ctx.moveTo(x4[i] * 22, y4[i] * 22);
-    ctx.bezierCurveTo(x4[i + 1] * 22, y4[i+1] * 22,x4[i+2] * 22,y4[i+2] * 22,x4[i + 3] * 22,y4[i + 3] * 22);
-}
-
-for(let i = 0; i < x5.length; i++) {
-    ctx.moveTo(x5[i] * 22, y5[i] * 22);
-    ctx.bezierCurveTo(x5[i + 1] * 22, y5[i+1] * 22,x5[i+2] * 22,y5[i+2] * 22,x5[i + 3] * 22,y5[i + 3] * 22);
-}
-
-for(let i = 0; i < x6.length; i++) {
-    ctx.moveTo(x6[i] * 22, y6[i] * 22);
-    ctx.bezierCurveTo(x6[i + 1] * 22, y6[i+1] * 22,x6[i+2] * 22,y6[i+2] * 22,x6[i + 3] * 22,y6[i + 3] * 22);
-}
-ctx.stroke();
