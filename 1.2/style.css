@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+background:url(kosmos1.jpg) no-repeat;
+background-size: cover;
+background-attachment:fixed;
+}
+.TD {
+ float: left;
+ margin:5px 50px 0px 10px;
+ background:#8EA45B;
+ border-radius: 60px;
+ width: 250px;
+ height:65px;
+ text-align:center;
+ line-height:50px; 
+ text-color:black;
+ -moz-transition: all 0.8s ease-out;
+ -o-transition: all 0.8s ease-out;
+ -webkit-transition: all 1s ease-out;
+}
+.TD:hover{
+ -webkit-transform: scale(1.1);
+}
+.block{
+ float: left;
+ margin:50px 0px 0px 300px;
+ background:#244412;
+ border-radius: 25px;
+ width: 450px;
+ -moz-transition: all -0.8s ease-out;
+ -o-transition: all -0.8s ease-out;
+ -webkit-transition: all 0.25s ease-out;
+}
+.block:hover{
+ -webkit-transform: scale(1.1);
+}
+.photo_1{
+ float: left;
+ margin:10px 0px 0px 30px;
+ background:#244412;
+ border-radius: 25px;
+ width: 410px;
+ -moz-transition: all -0.8s ease-out;
+ -o-transition: all -0.8s ease-out;
+ -webkit-transition: all 0.25s ease-out;
+}
+.photo_1:hover{
+ -webkit-transform: scale(1.25);
+}
+.photo_2{
+ float: left;
+ margin:0px 0px 0px 300px;
+ background:#244412;
+ border-radius: 25px;
+ width: 560px;
+ -moz-transition: all -0.8s ease-out;
+ -o-transition: all -0.8s ease-out;
+ -webkit-transition: all 0.25s ease-out;
+}
+.photo_2:hover{
+ -webkit-transform: scale(1.25);
+}
+.img{
+	margin:5px 0px 0px 30px;
+}
+.animationen {
+ float: left;
+ line-height: -100%;
+ margin:0px 0px 0px 30px;
+ width: 500px;
+ font-family: Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 120%;
+ text-align:left;
+ line-height:30px;
+ color:#d0f0c0;
+} 
+.animationen:hover{
+ -webkit-transform: scale(1.025);
+}
+.Link {
+ margin:5px 0px 0px 0px;
+ color:#d0f0c0;
+ display: block;
+ width: 250px;
+ height:65px;
+ font-size:18px;
+ text-decoration:none;
+}
+.Link:hover{
+ margin:0px 0px 0px 0px;
+ background:#625e4f;
+ border-radius:56px;
+ transition-property: background;
+ transition-duration:0.54s;                                
+}
+.polosa{
+	margin-left:-9px;
+	margin-top:-10px;
+	margin-right:-9px;
+	margin-bottom:0px;
+	background:#000000;
+	opacity:0.8;
+	height:50px;
+	text-align:center;
+	font-size:25px;
+	padding:15px;
+}
+.polosa2{
+	margin-left:-9px;
+	margin-top:-1px;
+	margin-right:-9px;
+	margin-bottom:0px;
+	background:#000000;
+	opacity:0.8;
+	height:0.3px;
+	text-align:center;
+	font-size:0.3px;
+	padding:1.9px;
+	color:#276519;
+}
+.ff font{
+	background:#182128;
+}
+.hh{
+	line-height: 1.3em;
+}
