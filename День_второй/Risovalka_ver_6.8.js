@@ -83,6 +83,8 @@ class Graphics1d {
       if(this.values[i] > 0 && this.values[i] < 10e-10){
         ctx.stroke();
         ctx.closePath();
+        // нули красим в индиго
+        if((this.values[i] > 0 && this.values[i + 1] < 0) || (this.values[i] < 0 && this.values[i + 1] > 0)){
         ctx.beginPath();
         ctx.fillStyle = zeros;
         ctx.arc(zerox + i * stepx, zeroy - stepy * this.values[i - 0.1], 3, 0, 180);
@@ -92,6 +94,7 @@ class Graphics1d {
         ctx.fill();
         ctx.closePath();
         ctx.beginPath();
+        }
       }
       else{
       console.log(i, this.values[i]);
