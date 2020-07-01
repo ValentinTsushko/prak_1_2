@@ -24,7 +24,7 @@ background-attachment:fixed;
 }
 .block{
  float: left;
- margin:2px 0px 0px 300px;
+ margin:12px 0px 0px 300px;
  background:#666666;
  border-radius: 25px;
  width: 525px;
