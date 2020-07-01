@@ -103,7 +103,9 @@ class Graphics1d {
     ctx.font = '20px serif';
     ctx.fillStyle = "black";
     ctx.fillText('(' + this.xmax + ", " + this.ymax + ')', zerox + this.xmax * stepx - 70, zeroy + this.ymin * stepy + 20);
-    ctx.fillText('(' + this.xmin + ", "+ this.ymin + ')', zerox + this.xmin * stepx , zeroy + this.ymax * stepy - 10);
+    ctx.fillText('(' + this.xmin + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymax * stepy - 10);
+    ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmax * stepx - 75, zeroy + this.ymax * stepy - 10);
+    ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymin * stepy + 20);
   }
 
   autodraw(
