@@ -123,7 +123,44 @@ class Graphics1d {
   }
 }
 
+function rationing(str) {
+    str = str.split("cos").join("Math.cos");
+    str = str.split("sin").join("Math.sin");
+    str = str.split("tan").join("Math.tan");
+    str = str.split("aMath.cos").join("Math.acos");
+    str = str.split("aMath.sin").join("Math.asin");
+    str = str.split("aMath.tan").join("Math.atan");
+    str = str.split("pi").join("Math.PI");
+    str = str.split("ln2").join("Math.LN2");
+    str = str.split("ln10").join("Math.LN10");
+    str = str.split("log2e").join("Math.LOG2E");
+    str = str.split("log10e").join("Math.LOG10E");
+    str = str.split("sqrt1_2").join("Math.SQRT1_2");
+    str = str.split("sqrt2").join("Math.SQRT2");
+    str = str.split("abs").join("Math.abs");
+    str = str.split("ceil").join("Math.ceil");
+    str = str.split("exp").join("Math.exp");
+    str = str.split("floor").join("Math.floor");
+    str = str.split("ln").join("Math.log");
+    str = str.split("max").join("Math.max");
+    str = str.split("min").join("Math.min");
+    str = str.split("pow").join("Math.pow");
+    str = str.split("round").join("Math.round");
+    str = str.split("lg").join("logab");
+    str = str.split("sqrt").join("Math.sqrt");
+    str = str.split("e").join("Math.E");
+    return str;
+}
     var graf = new Graphics1d();
     graf.draw();
- 
+
+function run(){
+  var func = document.getElementById("func").value;
+  func = rationing(func);
+  var funct = function(x){
+    return eval(func);
+  };
+  var graf = new Graphics1d(-10.0, 10.0, -10.0, 10.0, 120 * 4.2, 100 * 5, funct);
+  graf.draw();
+}
 
