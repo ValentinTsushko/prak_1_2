@@ -77,7 +77,7 @@ class Graphics1d {
     ctx.beginPath();
     ctx.lineWidth = 1.5;  // ширина функции
     ctx.strokeStyle = dots;  // красненькай
-    ctx.moveTo(zerox + (this.f(this.xmin) * stepx), zeroy - (this.f(this.xmin) * stepy)); // нулевая точка + значение функции в минимальной точки функции * на шаг
+    ctx.moveTo(zerox + (this.xmin * stepx), zeroy - (this.f(this.xmin) * stepy)); // нулевая точка + значение функции в минимальной точки функции * на шаг
     for (let i = this.xmin; i <= this.xmax; i += 0.01){
       // точки приближенных нулей
       if(this.values[i] > 0 && this.values[i] < 10e-10){
@@ -105,7 +105,7 @@ class Graphics1d {
     ctx.fillText('(' + this.xmax + ", " + this.ymax + ')', zerox + this.xmax * stepx - 70, zeroy + this.ymin * stepy + 20);
     ctx.fillText('(' + this.xmin + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymax * stepy - 10);
     ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmax * stepx - 75, zeroy + this.ymax * stepy - 10);
-    ctx.fillText('(' + this.xmin + ", "+ this.ymax + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymin * stepy + 20);
+    ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymin * stepy + 20);
   }
 
   autodraw(
