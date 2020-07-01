@@ -7,7 +7,7 @@ class Graphics1d {
     W = 120 * 4.2,
     H = 100 * 5,
     f = function(x) {
-      return 10*Math.sin(x*x);
+      return 10 * Math.sin(x * x);
     }
   ) {
     this.xmin = xmin;
@@ -105,7 +105,7 @@ class Graphics1d {
     ctx.fillText('(' + this.xmax + ", " + this.ymax + ')', zerox + this.xmax * stepx - 70, zeroy + this.ymin * stepy + 20);
     ctx.fillText('(' + this.xmin + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymax * stepy - 10);
     ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmax * stepx - 75, zeroy + this.ymax * stepy - 10);
-    ctx.fillText('(' + this.xmax + ", "+ this.ymin + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymin * stepy + 20);
+    ctx.fillText('(' + this.xmin + ", "+ this.ymax + ')', zerox + this.xmin * stepx + 5, zeroy + this.ymin * stepy + 20);
   }
 
   autodraw(
